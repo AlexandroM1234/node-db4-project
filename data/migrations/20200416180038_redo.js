@@ -5,15 +5,15 @@ exports.up = function (knex) {
       .createTable("Recipes", (tbl) => {
         tbl.increments();
 
-        tbl.string("Recipe Name", 255).notNullable().unique();
+        tbl.string("RecipeName", 255).notNullable().unique();
       })
 
       // Ingredients
       .createTable("Ingredients", (tbl) => {
         tbl.increments();
 
-        tbl.string("Ingredient Name", 255).notNullable();
-        tbl.string("Ingredient Amount", 255).notNullable();
+        tbl.string("IngredientName", 255).notNullable();
+        tbl.string("IngredientAmount", 255).notNullable();
 
         // foreign key
         tbl
